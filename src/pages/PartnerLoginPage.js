@@ -123,12 +123,12 @@ const PartnerLoginPage = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #2a1a6e, #4b2a9d, #6b48ff)',
+      background: 'linear-gradient(135deg, #e0e7ff, #c7d2fe, #a5b4fc)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       padding: '2.5rem 1rem',
-      fontFamily: '"Helvetica Neue", Arial, sans-serif',
+      fontFamily: '"Roboto", "Helvetica Neue", Arial, sans-serif',
       overflow: 'hidden',
       position: 'relative',
     }}>
@@ -139,7 +139,7 @@ const PartnerLoginPage = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        background: 'radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)',
+        background: 'radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 70%)',
         zIndex: 0,
       }} />
 
@@ -148,45 +148,43 @@ const PartnerLoginPage = () => {
         maxWidth: '900px',
         textAlign: 'center',
         marginBottom: '3rem',
-        animation: 'slideDown 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        animation: 'slideDown 0.8s ease-out',
         zIndex: 1,
       }}>
         <h1 style={{
-          color: '#ffffff',
+          color: '#4c51bf',
           fontSize: '3.2rem',
-          fontWeight: 900,
+          fontWeight: 800,
           margin: 0,
-          textShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+          textShadow: '0 2px 6px rgba(76, 81, 191, 0.1)',
           letterSpacing: '1px',
         }}>BASMAH JO</h1>
         <p style={{
-          color: 'rgba(255, 255, 255, 0.9)',
+          color: '#64748b',
           fontSize: '1.4rem',
           marginTop: '0.75rem',
           fontWeight: 500,
-          textShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
         }}>Partner Login</p>
       </header>
 
       <div style={{
-        background: 'rgba(255, 255, 255, 0.98)',
-        padding: '3rem',
-        borderRadius: '25px',
-        boxShadow: '0 15px 40px rgba(0, 0, 0, 0.2)',
+        background: 'rgba(255, 255, 255, 0.95)',
+        padding: '3rem 2.5rem',
+        borderRadius: '20px',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
         width: '100%',
         maxWidth: '520px',
         textAlign: 'center',
         animation: 'fadeInUp 0.7s ease-out',
-        backdropFilter: 'blur(8px)',
-        border: '1px solid rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(5px)',
+        border: '1px solid rgba(100, 116, 139, 0.1)',
         zIndex: 1,
       }}>
         <h2 style={{
-          color: '#4b2a9d',
+          color: '#4c51bf',
           fontSize: '1.9rem',
           marginBottom: '2.5rem',
           fontWeight: 700,
-          textShadow: '0 2px 4px rgba(75, 42, 157, 0.2)',
           letterSpacing: '0.5px',
         }}>Login to Partner Dashboard</h2>
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.8rem' }}>
@@ -196,7 +194,7 @@ const PartnerLoginPage = () => {
               left: '1.2rem',
               top: '50%',
               transform: 'translateY(-50%)',
-              color: '#757575',
+              color: '#94a3b8',
             }}>
               <Mail size={24} />
             </div>
@@ -210,21 +208,22 @@ const PartnerLoginPage = () => {
               placeholder="Enter your Email"
               style={{
                 padding: '1.2rem 1.2rem 1.2rem 3.5rem',
-                border: '2px solid #e0e0e0',
+                border: '2px solid #e2e8f0',
                 borderRadius: '12px',
                 fontSize: '1.1rem',
                 width: '100%',
                 boxSizing: 'border-box',
                 transition: 'all 0.4s ease',
-                background: 'rgba(255, 255, 255, 0.95)',
+                background: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: 500,
+                color: '#1e293b',
               }}
               onFocus={e => {
-                e.target.style.borderColor = '#4b2a9d';
-                e.target.style.boxShadow = '0 0 15px rgba(75, 42, 157, 0.2)';
+                e.target.style.borderColor = '#4c51bf';
+                e.target.style.boxShadow = '0 0 12px rgba(76, 81, 191, 0.1)';
               }}
               onBlur={e => {
-                e.target.style.borderColor = '#e0e0e0';
+                e.target.style.borderColor = '#e2e8f0';
                 e.target.style.boxShadow = 'none';
               }}
             />
@@ -235,7 +234,7 @@ const PartnerLoginPage = () => {
               left: '1.2rem',
               top: '50%',
               transform: 'translateY(-50%)',
-              color: '#757575',
+              color: '#94a3b8',
             }}>
               <Lock size={24} />
             </div>
@@ -249,21 +248,22 @@ const PartnerLoginPage = () => {
               placeholder="Enter your Password"
               style={{
                 padding: '1.2rem 1.2rem 1.2rem 3.5rem',
-                border: '2px solid #e0e0e0',
+                border: '2px solid #e2e8f0',
                 borderRadius: '12px',
                 fontSize: '1.1rem',
                 width: '100%',
                 boxSizing: 'border-box',
                 transition: 'all 0.4s ease',
-                background: 'rgba(255, 255, 255, 0.95)',
+                background: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: 500,
+                color: '#1e293b',
               }}
               onFocus={e => {
-                e.target.style.borderColor = '#4b2a9d';
-                e.target.style.boxShadow = '0 0 15px rgba(75, 42, 157, 0.2)';
+                e.target.style.borderColor = '#4c51bf';
+                e.target.style.boxShadow = '0 0 12px rgba(76, 81, 191, 0.1)';
               }}
               onBlur={e => {
-                e.target.style.borderColor = '#e0e0e0';
+                e.target.style.borderColor = '#e2e8f0';
                 e.target.style.boxShadow = 'none';
               }}
             />
@@ -278,11 +278,11 @@ const PartnerLoginPage = () => {
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
-                color: '#757575',
+                color: '#94a3b8',
                 transition: 'color 0.3s ease, transform 0.2s ease',
               }}
-              onMouseEnter={e => { e.target.style.color = '#4b2a9d'; e.target.style.transform = 'scale(1.1)'; }}
-              onMouseLeave={e => { e.target.style.color = '#757575'; e.target.style.transform = 'scale(1)'; }}
+              onMouseEnter={e => { e.target.style.color = '#4c51bf'; e.target.style.transform = 'scale(1.1)'; }}
+              onMouseLeave={e => { e.target.style.color = '#94a3b8'; e.target.style.transform = 'scale(1)'; }}
             >
               {showPassword ? <EyeOff size={24} /> : <Eye size={24} />}
             </button>
@@ -292,12 +292,12 @@ const PartnerLoginPage = () => {
               display: 'flex',
               alignItems: 'center',
               padding: '1.2rem',
-              background: 'rgba(254, 226, 226, 0.95)',
+              background: 'rgba(253, 224, 224, 0.9)',
               border: '1px solid #f87171',
               borderRadius: '12px',
               color: '#991b1b',
               animation: 'slideIn 0.5s ease-out',
-              boxShadow: '0 2px 10px rgba(248, 113, 113, 0.2)',
+              boxShadow: '0 2px 8px rgba(248, 113, 113, 0.1)',
             }}>
               <AlertCircle size={24} style={{ marginRight: '0.8rem' }} />
               <span style={{ fontWeight: 500 }}>{error}</span>
@@ -308,12 +308,12 @@ const PartnerLoginPage = () => {
               display: 'flex',
               alignItems: 'center',
               padding: '1.2rem',
-              background: 'rgba(209, 250, 229, 0.95)',
+              background: 'rgba(209, 250, 229, 0.9)',
               border: '1px solid #6ee7b7',
               borderRadius: '12px',
               color: '#047857',
               animation: 'slideIn 0.5s ease-out',
-              boxShadow: '0 2px 10px rgba(110, 231, 183, 0.2)',
+              boxShadow: '0 2px 8px rgba(110, 231, 183, 0.1)',
             }}>
               <CheckCircle size={24} style={{ marginRight: '0.8rem' }} />
               <span style={{ fontWeight: 500 }}>{success}</span>
@@ -324,7 +324,7 @@ const PartnerLoginPage = () => {
             disabled={loading}
             style={{
               padding: '1.2rem 2.5rem',
-              background: loading ? '#a3a3a3' : 'linear-gradient(90deg, #4b2a9d, #6b48ff)',
+              background: loading ? '#d1d5db' : 'linear-gradient(90deg, #4c51bf, #6366f1)',
               color: 'white',
               border: 'none',
               borderRadius: '12px',
@@ -332,12 +332,12 @@ const PartnerLoginPage = () => {
               fontWeight: 600,
               cursor: loading ? 'not-allowed' : 'pointer',
               transition: 'all 0.4s ease',
-              boxShadow: '0 6px 20px rgba(107, 72, 255, 0.4)',
+              boxShadow: '0 4px 15px rgba(99, 102, 241, 0.2)',
               textTransform: 'uppercase',
               letterSpacing: '1px',
             }}
-            onMouseEnter={e => !loading && (e.target.style.background = 'linear-gradient(90deg, #3a1f78, #5a38cc)', e.target.style.transform = 'translateY(-3px)')}
-            onMouseLeave={e => !loading && (e.target.style.background = 'linear-gradient(90deg, #4b2a9d, #6b48ff)', e.target.style.transform = 'translateY(0)')}
+            onMouseEnter={e => !loading && (e.target.style.background = 'linear-gradient(90deg, #3b41a9, #4f52c7)', e.target.style.transform = 'translateY(-3px)')}
+            onMouseLeave={e => !loading && (e.target.style.background = 'linear-gradient(90deg, #4c51bf, #6366f1)', e.target.style.transform = 'translateY(0)')}
             onMouseDown={e => !loading && (e.target.style.transform = 'translateY(0)')}
           >
             {loading ? (
@@ -364,26 +364,26 @@ const PartnerLoginPage = () => {
         background: 'rgba(255, 255, 255, 0.95)',
         padding: '1.8rem',
         borderRadius: '20px',
-        boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 6px 20px rgba(0, 0, 0, 0.05)',
         width: '100%',
         maxWidth: '520px',
         marginTop: '3rem',
         textAlign: 'center',
-        color: '#444',
+        color: '#64748b',
         animation: 'fadeInUp 0.7s ease-out 0.2s backwards',
         zIndex: 1,
       }}>
-        <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>BASMAH JO</p>
-        <p style={{ fontSize: '0.9rem', color: '#666' }}>© 2024 Basmah Jo. All rights reserved.</p>
+        <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 500 }}>BASMAH JO</p>
+        <p style={{ fontSize: '0.9rem' }}>© 2024 Basmah Jo. All rights reserved.</p>
         <p style={{ fontSize: '0.9rem' }}>
           <a href="mailto:support@basmahjo.com" style={{
-            color: '#4b2a9d',
+            color: '#4c51bf',
             textDecoration: 'none',
             transition: 'color 0.3s ease',
             fontWeight: 500,
           }}
-          onMouseEnter={e => e.target.style.color = '#6b48ff'}
-          onMouseLeave={e => e.target.style.color = '#4b2a9d'}
+          onMouseEnter={e => e.target.style.color = '#6366f1'}
+          onMouseLeave={e => e.target.style.color = '#4c51bf'}
           >For support, contact support@basmahjo.com</a>
         </p>
       </footer>
